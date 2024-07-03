@@ -37,7 +37,7 @@ function TaskForm() {
                 width='300px'
                 checked={title.length > 0 ? true : false}
                 widthMobile='300px'
-                value={title.toUpperCase()}
+                value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 maxLength={30}
             />

@@ -45,7 +45,7 @@ function TaskItem({ task }) {
             </IconButton>
           </Stack>
           <div draggable className='taskItem_gral_container_tasks'>
-            <CustomText text={task.title} fontSize='30px' fontSizeMobile='20px' textAlignMobile='center' whiteSpace='normal' styles={{justifyContent:'center'}}/>
+            <CustomText text={task.title.toUpperCase()} fontSize='30px' fontSizeMobile='20px' textAlignMobile='center' whiteSpace='normal' styles={{justifyContent:'center'}}/>
             <CustomText text={task.description} fontWeight={400} fontWeightMobile={400} fontSize='20px' fontSizeMobile='15px' textAlignMobile='center' whiteSpace='normal' styles={{justifyContent:'center'}} />
           </div>
           <Stack flexDirection={isMobile ? 'column' : 'row'} className='taskItem_gral_container_buttons'>
@@ -67,7 +67,7 @@ function TaskItem({ task }) {
               inputProps={{
                 maxLength:20
               }}
-              value={editedTitle.toUpperCase()}
+              value={editedTitle}
               onChange={(e) => setEditedTitle(e.target.value)}
             />
             <TextField
