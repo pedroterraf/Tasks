@@ -1,0 +1,26 @@
+.taskItem_gral {
+    flex-direction: row !important;
+    width: 100% !important;
+}
+
+.taskItem_gral_li {
+    flex-direction: row;
+    width: 100%;
+}
+
+.taskItem_gral_container_checked {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.taskItem_gral_container_tasks {
+    display: flex;
+    flex-direction: column;
+}
+.taskItem_gral_container_buttons {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 1em;
+}

@@ -1,0 +1,11 @@
+.taskForm_gral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.taskForm_gral_container {
+    gap: 1em;
+    width: 300px;
+}
