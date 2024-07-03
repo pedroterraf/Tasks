@@ -9,7 +9,7 @@ export const TaskProvider = ({ children }) => {
   // Cargar las tareas del localStorage al montar el componente
   const loadStorage = () => {
     const storedTasks = JSON.parse(localStorage.getItem('tasks'));
-    setTasks(storedTasks || []); // Manejar el caso donde no hay tareas almacenadas
+    setTasks(storedTasks || []); // si no hay tareas almacenadas === []
   };
 
   // Guardar las tareas en el localStorage cada vez que cambien
@@ -26,12 +26,12 @@ export const TaskProvider = ({ children }) => {
 
   // Eliminar tareas del estado tasks
   const deleteTask = (id) => {
-    const updatedTasks = tasks.filter((task) => task.id !== id);
+    const updatedTasks = tasks.filter((task) => task.id !== id); //Filtro todas las tareas que sean diferentes al id que quiero borrar
     setTasks(updatedTasks);
     saveStorage(updatedTasks);
   };
 
-  // Filtro
+  // Filtro de tareas compleatadas o pendientes
   const toggleTask = (id) => {
     const updatedTasks = tasks.map((task) =>
       task.id === id ? { ...task, completed: !task.completed } : task
@@ -51,9 +51,9 @@ export const TaskProvider = ({ children }) => {
 
   useEffect(() => {
     if (tasks.length) {
-      saveStorage(tasks);
+      saveStorage(tasks); //Si hay tareas en el estado, cargarlas
     } else {
-      saveStorage(JSON.parse(localStorage.getItem('tasks')));
+      saveStorage(JSON.parse(localStorage.getItem('tasks'))); //Si no hay tareas en el estado, busca en el localStorage
     }
   },[tasks])
 

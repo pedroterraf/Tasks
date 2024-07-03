@@ -1,12 +1,12 @@
 import { useState, useContext } from 'react';
 import { IconButton, Stack, Dialog, DialogActions, DialogContent, DialogTitle, TextField, Button } from '@mui/material';
+import { TaskContext } from '../../context/TaskContext';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import CustomText from '../../styled/CustomText/CustomText';
 import CustomButton from '../../styled/CustomButton/CustomButton';
 import trash from '/trash.svg';
 import edit from '/edit.svg';
-import { TaskContext } from '../../context/TaskContext';
 import './TaskItem.css'
 
 function TaskItem({ task }) {
@@ -64,6 +64,9 @@ function TaskItem({ task }) {
               label="Title"
               type="text"
               fullWidth
+              inputProps={{
+                maxLength:20
+              }}
               value={editedTitle}
               onChange={(e) => setEditedTitle(e.target.value)}
             />
@@ -72,6 +75,9 @@ function TaskItem({ task }) {
               label="Description"
               type="text"
               fullWidth
+              inputProps={{
+                maxLength:80
+              }}
               multiline
               rows={4}
               value={editedDescription}

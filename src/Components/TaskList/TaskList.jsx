@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
-import TaskItem from '../TaskItem/TaskItem';
 import { TaskContext } from '../../context/TaskContext';
 import { Autocomplete, TextField, Stack } from '@mui/material';
+import TaskItem from '../TaskItem/TaskItem';
 import './TaskList.css'
 
 const TaskList = () => {

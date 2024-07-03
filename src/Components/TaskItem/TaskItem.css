@@ -1,11 +1,16 @@
 .taskItem_gral {
     flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
     width: 100% !important;
 }
 
 .taskItem_gral_li {
+    justify-content: space-between;
+    align-items: center;
     flex-direction: row;
-    width: 100%;
+    width: 90%;
+    max-width: 900px;
 }
 
 .taskItem_gral_container_checked {

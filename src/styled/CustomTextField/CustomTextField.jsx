@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { TextField } from "@mui/material";
-import PropTypes from "prop-types";
-import checkCircle from "/checkCircle.svg";
-import CustomText from "../../styled/CustomText/CustomText";
 import { styled as muiStyled } from "@mui/material/styles";
+import CustomText from "../../styled/CustomText/CustomText";
+import checkCircle from "/checkCircle.svg";
 
 const CustomTextField = ({
   label,
